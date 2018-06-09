@@ -7,13 +7,15 @@ class Nav extends Component {
         return(
             <div>
                 <img src={Block_logo} alt="3Bears Block logo" className="block-logo"/>
-                <nav className="nav-bar">
-                    companies
-                    discover
-                    research
-                    write a review
-                    about
-                    contact
+                <nav>
+                    <ul className="nav-bar">
+                        <li>companies</li>
+                        <li>discover</li>
+                        <li>research</li>
+                        <li>write a review</li>
+                        <li>about</li>
+                        <li>contact</li>
+                    </ul>
                 </nav>
             </div>
         )
