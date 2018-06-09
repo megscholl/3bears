@@ -1,0 +1,21 @@
+.block-logo {
+    padding-top: 1%;
+    width: 25%;
+    float: left;
+    margin-left: 5%;
+}
+
+.nav-bar {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 60%;
+    float: right;
+    padding-right: 5%;
+    padding-top: 5%;
+    
+}
+
+ul li {
+    list-style-type: none;
+}
