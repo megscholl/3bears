@@ -1,0 +1,15 @@
+.inline-logo {
+    width: 35%;
+}
+
+.center-footer {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h5, h6 {
+    font-weight: normal;
+    line-height: 1px;
+    text-align: center;
+}
