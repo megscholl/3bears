@@ -1,0 +1,34 @@
+.onload-modal {
+        background-image: url('./images/messy-desk.jpg') ;
+        background-position: center center;
+        background-repeat:  no-repeat;
+        width: 100%;
+        margin: auto;
+        background-size: cover;
+        
+        align-items: center !important;
+        justify-content: center !important;
+}
+
+.modal-height {
+        /* width: 100%;
+        height: 300px; */
+
+        margin: auto;
+        width: 50%;
+        border: 3px solid green;
+        padding: 10px;
+}
+
+h1 {
+        font-family: 'Copperplate', 'Copperplate Gothic Light', fantasy; 
+        font-size: 180px !important;
+        text-align: center;
+}
+
+.modal-content {
+        text-align: center;
+        font-size: 18px;
+        background-color: rgba(250, 250, 250, 0.7);
+        padding: 1rem;
+}
