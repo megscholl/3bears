@@ -1,6 +1,7 @@
 
 import React from 'react'
 import './modal.css'
+import BlockBears from './images/block_png.png';
 import { Button, Modal } from 'semantic-ui-react'
 
 
@@ -21,27 +22,27 @@ constructor(props) {
     this.setState({ visible: false });
     }
     
-    componentDidMount (){
-        setTimeout(() => {
-     this.setState({ visible: false });     
-        }, 10000)
-    }
+    // componentDidMount (){
+    //     setTimeout(() => {
+    //  this.setState({ visible: false });     
+    //     }, 10000)
+    // }
 
   render () {
   return (
-      <Modal trigger={<Button>Show Modal</Button>} closeIcon centered={false} className="modal-height">
+      <Modal trigger={<Button>Show Modal</Button>} closeIcon centered="false" id="modal-margin" className="modal-height">
       
-        <body className="onload-modal">
+        <div className="onload-modal">
           <Modal.Content className="content">
-          <h1>3Bears</h1>
+          <img src={BlockBears} alt="3Bears logo" className="bears-logo"/>
             <p className="modal-content">
             Welcome to 3Bears! Your online source to discovering a company whose culture fit's your values & views in a workplace just right. 
             </p>
           </Modal.Content>
-        </body>
+        </div>
       </Modal>
     )
 }
 }
     
-    export default Reminder;
+export default Reminder;
