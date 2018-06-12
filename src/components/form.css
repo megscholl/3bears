@@ -1,6 +1,17 @@
 .field-30 {
     width: 30%;
+    padding: 20px 10px; 
+    line-height: 28px; 
     margin-right: auto;
     margin-left: auto;
     /* text-align: center; */
+}
+
+.field-50 {
+    width: 50%;
+}
+
+.field-height {
+    height: 65px !important;
+    
 }

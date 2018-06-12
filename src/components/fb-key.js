@@ -12,5 +12,4 @@ const app = firebase.initializeApp(config)
 
 export const rebase = Rebase.createClass(app.database());
 
-export const googleProvider = new firebase.auth.GoogleAuthProvider();
 
