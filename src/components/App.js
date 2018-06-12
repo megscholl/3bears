@@ -5,16 +5,11 @@ import Main from './Main';
 import Footer from './Footer';
 import CompanyForm from './Form';
 import Reminder from './OnLoadModal';
+import CompanyCards from './Cards';
 
 
 
 class App extends Component {
-
-  
-  syncing() {
-    console.log("I AM SYNCING", this.state.userObj.uid)
-    }  
-
 
   render() {
     return (
@@ -22,6 +17,7 @@ class App extends Component {
       <div className="modal-css"><Reminder /></div>
           <Nav />
           <Main />
+          <CompanyCards />
           <CompanyForm />
           <Footer />
       </div>

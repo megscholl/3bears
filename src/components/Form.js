@@ -58,7 +58,7 @@ class CompanyForm extends React.Component {
     alert('Thank you for adding a review about ' + this.state.company + '! This will ensure that 3Bears will be the number 1 site for job-seekers, once like yourself, to find information about the culture fit of different companies in Nashville.');
     event.preventDefault();
     let stateObject = this.state;
-    SaveObjToFB(`companies/${this.state.company}`, stateObject);
+    SaveObjToFB(`companies/${(this.state.company).toLowerCase()}`, stateObject);
   }
 
   render() {
