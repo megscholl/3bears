@@ -7,7 +7,6 @@ const config = {
     databaseURL: "https://bears-22c68.firebaseio.com"
 }
 
-
 const app = firebase.initializeApp(config)
 
 export const rebase = Rebase.createClass(app.database());
