@@ -1,3 +1,25 @@
 main {
-    padding: 40vh;
+    font-size: 22px;
+}
+
+.quote-container {
+    width: 55%;
+    padding-top: 15%;
+    padding-left: 5rem;
+}
+
+.quote-blockquote {
+    font-style: italic;
+}
+
+.author {
+    font-style: italic;
+    color: rgb(51, 92, 131);
+}
+
+.bear {
+    padding-top: 4rem;
+    padding-right: 18%;
+    width: 20%;
+    float: right;
 }

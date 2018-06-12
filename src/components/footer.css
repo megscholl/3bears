@@ -1,5 +1,5 @@
 .inline-logo {
-    width: 35%;
+    width: 25%;
 }
 
 .center-footer {
@@ -10,6 +10,10 @@
 
 h5, h6 {
     font-weight: normal;
-    line-height: 1px;
+    line-height: .5px;
     text-align: center;
+}
+
+.footer {
+    padding-top: 20%;
 }
