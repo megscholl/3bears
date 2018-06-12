@@ -19,9 +19,9 @@ class App extends Component {
   render() {
     return (
       <div>
+      <div className="modal-css"><Reminder /></div>
           <Nav />
           <Main />
-          <div className="modal-css"><Reminder /></div>
           <CompanyForm />
           <Footer />
       </div>

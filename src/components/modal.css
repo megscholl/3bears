@@ -10,9 +10,6 @@
 }
 
 .modal-height {
-        /* width: 100%;
-        height: 300px; */
-
         margin: auto;
         width: 50%;
         border: 3px solid green;
@@ -27,7 +24,7 @@ h1 {
 
 .modal-content {
         text-align: center;
-        font-size: 18px;
+        font-size: 28px;
         background-color: rgba(250, 250, 250, 0.7);
         padding: 1rem;
 }
@@ -40,5 +37,5 @@ h1 {
 
 .bears-logo {
         width: 80%;
-        margin-left: 4rem;
+        margin-left: 5rem;
 }
