@@ -1,0 +1,19 @@
+.inline-logo {
+    width: 25%;
+}
+
+.center-footer {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h5, h6 {
+    font-weight: normal;
+    line-height: .5px;
+    text-align: center;
+}
+
+.footer {
+    padding-top: 20%;
+}
