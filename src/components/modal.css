@@ -1,11 +1,10 @@
 .onload-modal {
-        background-image: url('./images/messy-desk.jpg') ;
+        background-image: url('./images/open-space-2.jpg') ;
         background-position: center center;
         background-repeat:  no-repeat;
         width: 100%;
         margin: auto;
         background-size: cover;
-        
         align-items: center !important;
         justify-content: center !important;
 }
@@ -31,4 +30,15 @@ h1 {
         font-size: 18px;
         background-color: rgba(250, 250, 250, 0.7);
         padding: 1rem;
+}
+
+#modal-margin {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5rem !important;
+}
+
+.bears-logo {
+        width: 80%;
+        margin-left: 4rem;
 }

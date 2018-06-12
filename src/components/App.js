@@ -7,27 +7,6 @@ import CompanyForm from './Form';
 import Reminder from './OnLoadModal';
 
 
-// import {rebase} from './components/base';
-
-
-// getResults(data) {
-//   console.log("GET USER DATA USER", data);
-
-//    var ref = firebase.database().ref("users");
-//    ref.once("value").then(function (snapshot) {
-//      snapshot.forEach(function (childSnapshot) {
-//        var userFBKey = childSnapshot.key;
-//        if (user.uid === userFBKey) {
-//          // key = userFBKey;
-//          userData = childSnapshot.val();
-//          userZip = userData.zip;
-//        }
-//      });
-//      // console.log("Get user data zip", userZip)
-
-//    });
-//  }
-
 
 class App extends Component {
 
@@ -40,9 +19,9 @@ class App extends Component {
   render() {
     return (
       <div>
-          <div className="modal-css"><Reminder /></div>
           <Nav />
           <Main />
+          <div className="modal-css"><Reminder /></div>
           <CompanyForm />
           <Footer />
       </div>

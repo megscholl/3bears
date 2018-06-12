@@ -14,7 +14,7 @@ class Main extends Component {
                         <blockquote className="quote-blockquote">“...an understanding of our individual personality is profoundly important in maximizing our happiness and productivity at work!”</blockquote>
                         <h6 className="author">dr. kelly schofield, good&co 2016</h6>
 
-                        <Button class="ui button">
+                        <Button className="ui button">
                         Follow
                         </Button>
                     </div>

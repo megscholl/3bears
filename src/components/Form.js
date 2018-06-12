@@ -5,18 +5,19 @@ import {rebase} from './fb-key';
 import './form.css';
 
 
-export function SaveObjToFB (endpoint, objToSave, ) { //object  {}, endPoint "endPoint"
+export function SaveObjToFB (endpoint, objToSave, ) {
    return rebase.push(endpoint, {
      data: objToSave,
        then(err) {
          if(err) {
+          alert('There was an issue submitting your information. Please try again.');
          } else if (!err) {
-         
-         }
-       }
+           console.log("good to go");
+        }}
      })
      .then((result) => {
-       return result;
+        console.log("result of submitted data", result);
+        return result;
      })
  }
 
@@ -57,7 +58,7 @@ class CompanyForm extends React.Component {
     alert('Thank you for adding a review about ' + this.state.company + '! This will ensure that 3Bears will be the number 1 site for job-seekers, once like yourself, to find information about the culture fit of different companies in Nashville.');
     event.preventDefault();
     let stateObject = this.state;
-    SaveObjToFB(`${this.state.company}`, stateObject);
+    SaveObjToFB(`companies/${this.state.company}`, stateObject);
   }
 
   render() {
