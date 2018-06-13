@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './nav.css';
+import { NavLink } from 'react-router-dom';
 import Block_logo from './images/block_png.png';
 
 class Nav extends Component {
@@ -9,12 +10,12 @@ class Nav extends Component {
                 <img src={Block_logo} alt="3Bears Block logo" className="block-logo"/>
                 <nav>
                     <ul className="nav-bar">
-                        <li>companies</li>
-                        <li>discover</li>
-                        <li>research</li>
-                        <li>write a review</li>
-                        <li>about</li>
-                        <li>contact</li>
+                        <li><NavLink to="/companies">companies</NavLink></li>
+                        <li><NavLink to="/discover">discover</NavLink></li>
+                        <li><NavLink to="/research">research</NavLink></li>
+                        <li><NavLink to="/reviews">write a review</NavLink></li>
+                        <li><NavLink to="/about">about</NavLink></li>
+                        <li><NavLink to="/contact">contact</NavLink></li>
                     </ul>
                 </nav>
             </div>
