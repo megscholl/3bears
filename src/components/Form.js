@@ -53,9 +53,18 @@ class CompanyForm extends React.Component {
     const target = event.target;
     const value = target.value;
     const name = target.name;
+    console.log("value, name", value, name);
     this.setState({
-            [name]: value
+            name: value
     });
+  }
+
+  handleSelectBox = (selectedOption) => {
+    this.setState({ selectedOption });
+		// selectedOption can be null when the `x` (close) button is clicked
+		if (selectedOption) {
+    	console.log(`Selected: ${selectedOption.label}`);
+		}
   }
 
   handleSubmit(event) {
@@ -63,6 +72,7 @@ class CompanyForm extends React.Component {
     event.preventDefault();
     let stateObject = this.state;
     SaveObjToFB(`companies/${(this.state.company).toLowerCase()}`, stateObject);
+    console.log("form object", )
   }
 
   render() {
@@ -71,13 +81,13 @@ class CompanyForm extends React.Component {
       
         <Form onSubmit={this.handleSubmit} className="field-30">
 
-         
+         <Form.Field>
           <label>What company do you currently work for?</label>
-            <SelectBox />
- 
+            <SelectBox placeholder='Choose your company' name="company" changeCompany={this.handleSelectBox}/>
+          </Form.Field>
           <Form.Field className="field-50">
             <label>How large is the company?</label>
-            <input placeholder='Company size' name="size" value={this.state.size}  onChange={this.handleChange} />
+            <input placeholder={this.state.company} name="size" value={this.state.size}  onChange={this.handleChange} />
           </Form.Field>
           <Form.Field>
             <label>Does your office have a good balance of diversity?</label>

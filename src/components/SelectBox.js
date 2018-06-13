@@ -43,13 +43,7 @@ class SelectBox extends React.Component {
 
 
 
-  handleChange = (selectedOption) => {
-    this.setState({ selectedOption });
-		// selectedOption can be null when the `x` (close) button is clicked
-		if (selectedOption) {
-    	console.log(`Selected: ${selectedOption.label}`);
-		}
-  }
+
 
     render() {
         const { selectedOption } = this.state;
@@ -61,7 +55,7 @@ class SelectBox extends React.Component {
                         <Select
                             name="company"
                             value={selectedOption}
-                            onChange={this.handleChange}
+                            onChange={this.props.changeCompany}
                             options=
                                 {this.state.seeList.map((c) => {return {value: c, label: c}})}
                         />
