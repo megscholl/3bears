@@ -3,24 +3,28 @@ import React from 'react';
 import { Button, Form } from 'semantic-ui-react';
 import {rebase} from './fb-key';
 import './form.css';
+import SelectBox from './SelectBox';
+// import getCompanyResults from './Fetch';
 
 
-export function SaveObjToFB (endpoint, objToSave, ) {
+// console.log("getCompanyResults", getCompanyResults());
+
+
+export function SaveObjToFB (endpoint, objToSave) {
    return rebase.push(endpoint, {
      data: objToSave,
        then(err) {
          if(err) {
           alert('There was an issue submitting your information. Please try again.');
          } else if (!err) {
-           console.log("good to go");
+          //  console.log("good to go");
         }}
      })
      .then((result) => {
-        console.log("result of submitted data", result);
+        // console.log("result of submitted data", result);
         return result;
      })
  }
-
 
 
 class CompanyForm extends React.Component {
@@ -62,11 +66,14 @@ class CompanyForm extends React.Component {
   }
 
   render() {
+
     return (
+      
         <Form onSubmit={this.handleSubmit} className="field-30">
+
           <Form.Field>
-            <label>Company Name</label>
-            <input placeholder='Company name' name="company" value={this.state.company}  onChange={this.handleChange}/>
+          <label>What company do you currently work for?</label>
+            <SelectBox />
           </Form.Field>
           <Form.Field className="field-50">
             <label>How large is the company?</label>
