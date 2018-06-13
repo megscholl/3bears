@@ -16,9 +16,9 @@
         padding: 10px;
 }
 
-h1 {
+.modal-h1 {
         font-family: 'Copperplate', 'Copperplate Gothic Light', fantasy; 
-        font-size: 180px !important;
+        font-size: 120px !important;
         text-align: center;
 }
 
