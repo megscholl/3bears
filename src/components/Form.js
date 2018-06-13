@@ -71,10 +71,10 @@ class CompanyForm extends React.Component {
       
         <Form onSubmit={this.handleSubmit} className="field-30">
 
-          <Form.Field>
+         
           <label>What company do you currently work for?</label>
             <SelectBox />
-          </Form.Field>
+ 
           <Form.Field className="field-50">
             <label>How large is the company?</label>
             <input placeholder='Company size' name="size" value={this.state.size}  onChange={this.handleChange} />

@@ -1,58 +1,46 @@
 import React from 'react';
 import Select from 'react-select';
 
-
-
-
-
-    // componentWillMount() {
-    //     this.getCompanyResults()
-    //   }
       
-                    
-    companyState = (companyList) => {
-        console.log("company list companyState", companyList);
-        this.setState({
-        seeList: companyList
-        },
-        this.seeCoList()
-        // console.log("this.state", this.state)
-        );
-    }
-    
-    seeCoList = () => {
-        console.log("this.state", this.state)
-    }
-    
-    fetch("https://bears-22c68.firebaseio.com/companies.json")
-    .then(res => res.json())
-    .then(
-        (result) => {
-          let companyList = [];
-            let seeObject = Object.values(result);
-            for(let company in seeObject){
-              companyList.push(seeObject[company].company)
-            }
-              console.log("company List", companyList);
-  
-            this.companyState(companyList);
-        },
-        (error) => {
-            this.setState({
-                isLoaded: true,
-                error: error,
-            })
-        })
-
+       
 
 class SelectBox extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            selectedOption: '',
+            isLoaded: false,
+            seeList: '',
         }
     }
+
+
+
+    componentDidMount = () => {
+        fetch("https://bears-22c68.firebaseio.com/companies.json")
+        .then(res => res.json())
+        .then(
+            (result) => {
+            let companyList = [];
+                let seeObject = Object.values(result);
+                for(let company in seeObject){
+                companyList.push(seeObject[company].company)
+                }
+                console.log("company List", companyList);
+                this.setState({
+                    isLoaded: true,
+                    seeList: companyList
+                    })
+            },
+
+            (error) => {
+                this.setState({
+                    isLoaded: true,
+                    error: error,
+                })
+            })
+        }
+
 
 
   handleChange = (selectedOption) => {
@@ -62,19 +50,27 @@ class SelectBox extends React.Component {
     	console.log(`Selected: ${selectedOption.label}`);
 		}
   }
-  render() {
-  	const { selectedOption } = this.state;
 
-    return (
-        <Select>
-        {/*            {console.log("this.state", this.state)}
-                      {this.state.map(c => 
-                      <option value={c.company} onChange={this.handleChange}>{c.company}</option>
-                    )}
-                  */}
-                    </Select>
-    );
-  }
+    render() {
+        const { selectedOption } = this.state;
+        
+        if(this.state.isLoaded === true) {
+            // let optionsCollection = this.state.seeList.map((c) => <option value={c} label={c} onChange={this.handleChange}>{c}</option>);
+
+            return (
+                        <Select
+                            name="company"
+                            value={selectedOption}
+                            onChange={this.handleChange}
+                            options=
+                                {this.state.seeList.map((c) => {return {value: c, label: c}})}
+                        />
+            );
+            } else{
+                console.log("error setting state")
+                return(<div>error setting state</div>)
+            }
+        }
 }
 
 export default SelectBox;
