@@ -60,12 +60,13 @@ class CompanyForm extends React.Component {
     });
   }
 
-  handleSelectBox = (selectedOption) => {
-    this.setState({ selectedOption });
-		// selectedOption can be null when the `x` (close) button is clicked
-		if (selectedOption) {
-    	console.log(`Selected: ${selectedOption}`);
-		}
+  handleSelectBox = (a, b, c) => {
+    this.setState({ company: c.value }, this.checkState);
+
+  }
+
+  checkState = () => {
+    console.log("CHECKING STATE", this.state)
   }
 
   handleSubmit(event) {
@@ -85,7 +86,7 @@ class CompanyForm extends React.Component {
 
          <Form.Field>
           <label>What company do you currently work for?</label>
-          <SelectBox name="company" value={this.state}  changeCompany={this.handleSelectBox}/>
+          <SelectBox name="company" text={this.state.company} value={this.state.company}  changeCompany={this.handleSelectBox}/>
           </Form.Field>
           <Form.Field className="field-50">
             <label>How large is the company?</label>

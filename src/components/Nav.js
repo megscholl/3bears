@@ -10,6 +10,7 @@ class Nav extends Component {
                 <img src={Block_logo} alt="3Bears Block logo" className="block-logo"/>
                 <nav>
                     <ul className="nav-bar">
+                        <li><NavLink to="/">home</NavLink></li>
                         <li><NavLink to="/companies">companies</NavLink></li>
                         <li><NavLink to="/discover">discover</NavLink></li>
                         <li><NavLink to="/research">research</NavLink></li>
