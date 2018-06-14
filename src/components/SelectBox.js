@@ -12,6 +12,7 @@ class SelectBox extends React.Component {
         this.state = {
             isLoaded: false,
             seeList: '',
+            selectedOption: ''
         }
     }
 
@@ -30,7 +31,8 @@ class SelectBox extends React.Component {
                 console.log("company List", boxCompanyList);
                 this.setState({
                     isLoaded: true,
-                    seeList: boxCompanyList
+                    seeList: boxCompanyList,
+                    selectedOption: ''
                     })
             },
 
@@ -44,34 +46,20 @@ class SelectBox extends React.Component {
 
 
 
-  handleChange = (selectedOption) => {
-    this.setState({ selectedOption });
-		// selectedOption can be null when the `x` (close) button is clicked
-		if (selectedOption) {
-    	console.log(`Selected: ${selectedOption.label}`);
-		}
+  handleChange = (e, index, value) => {
+      console.log("e before setState: ", index.value)
+    this.setState({ selectedOption: index.value }, console.log("selectedOption: ", this.state.selectedOption));
+    
   }
 
     render() {
-        // const { selectedOption } = this.state;
         
         if(this.state.isLoaded === true) {
-            // let optionsCollection = this.state.seeList.map((c) => <option value={c} label={c} onChange={this.handleChange}>{c}</option>);
-                // let valueOfCompanyOptions = this.state.seeList.map((c) => {return {value: c, label: c}});
-                
+
+            let optionsList = this.state.seeList.map((c, index) => {return {value: c, label: c, key: index}})
             return (
                 <div>
-                
-                    <Dropdown placeholder='Choose your company' fluid search selection options={this.state.seeList.map((c) => {return {value: c, label: c}})} />
-
-                    
-                    {/*<Select
-                        name="company"
-                        value={selectedOption}
-                        onChange={this.handleChange}
-                        options=
-                            {this.state.seeList.map((c) => {return {value: c, label: c}})}
-                    />*/}
+                    <Dropdown placeholder='Choose your company' value={this.state.selectedOption} onChange={this.handleChange} fluid search selection options={optionsList} />
                 </div>
             );
             } else{

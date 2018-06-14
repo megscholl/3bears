@@ -53,7 +53,7 @@ class CompanyForm extends React.Component {
     const target = event.target;
     const value = target.value;
     const name = target.name;
-    console.log("value, name", value, name);
+    // console.log("value, name", value, name);
     this.setState({
             [name]: value
     });
@@ -63,7 +63,7 @@ class CompanyForm extends React.Component {
     this.setState({ selectedOption });
 		// selectedOption can be null when the `x` (close) button is clicked
 		if (selectedOption) {
-    	console.log(`Selected: ${selectedOption.label}`);
+    	console.log(`Selected: ${selectedOption}`);
 		}
   }
 
@@ -83,7 +83,7 @@ class CompanyForm extends React.Component {
 
          <Form.Field>
           <label>What company do you currently work for?</label>
-          <SelectBox placeholder='Choose your company' name="company" changeCompany={this.handleSelectBox}/>
+          <SelectBox name="company" value={this.state}  changeCompany={this.handleSelectBox}/>
           </Form.Field>
           <Form.Field className="field-50">
             <label>How large is the company?</label>
