@@ -3,13 +3,15 @@ main {
 }
 
 .quote-container {
-    width: 55%;
+    width: 100%;
     padding-top: 15%;
     padding-left: 5rem;
 }
 
 .quote-blockquote {
+    padding-top: 3rem;
     font-style: italic;
+    width: 55%;
 }
 
 .author {
@@ -17,9 +19,7 @@ main {
     color: rgb(51, 92, 131);
 }
 
-.bear {
-    padding-top: 4rem;
-    padding-right: 18%;
-    width: 20%;
+/* .bear {
+    width: 10%;
     float: right;
-}
+} */

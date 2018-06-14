@@ -3,24 +3,28 @@ import React from 'react';
 import { Button, Form } from 'semantic-ui-react';
 import {rebase} from './fb-key';
 import './form.css';
+import SelectBox from './SelectBox';
+// import getCompanyResults from './Fetch';
 
 
-export function SaveObjToFB (endpoint, objToSave, ) {
+// console.log("getCompanyResults", getCompanyResults());
+
+
+export function SaveObjToFB (endpoint, objToSave) {
    return rebase.push(endpoint, {
      data: objToSave,
        then(err) {
          if(err) {
           alert('There was an issue submitting your information. Please try again.');
          } else if (!err) {
-           console.log("good to go");
+          //  console.log("good to go");
         }}
      })
      .then((result) => {
-        console.log("result of submitted data", result);
+        // console.log("result of submitted data", result);
         return result;
      })
  }
-
 
 
 class CompanyForm extends React.Component {
@@ -49,28 +53,41 @@ class CompanyForm extends React.Component {
     const target = event.target;
     const value = target.value;
     const name = target.name;
+    console.log("value, name", value, name);
     this.setState({
-            [name]: value
+            name: value
     });
+  }
+
+  handleSelectBox = (selectedOption) => {
+    this.setState({ selectedOption });
+		// selectedOption can be null when the `x` (close) button is clicked
+		if (selectedOption) {
+    	console.log(`Selected: ${selectedOption.label}`);
+		}
   }
 
   handleSubmit(event) {
     alert('Thank you for adding a review about ' + this.state.company + '! This will ensure that 3Bears will be the number 1 site for job-seekers, once like yourself, to find information about the culture fit of different companies in Nashville.');
     event.preventDefault();
     let stateObject = this.state;
-    SaveObjToFB(`companies/${this.state.company}`, stateObject);
+    SaveObjToFB(`companies/${(this.state.company).toLowerCase()}`, stateObject);
+    console.log("form object", )
   }
 
   render() {
+
     return (
+      
         <Form onSubmit={this.handleSubmit} className="field-30">
-          <Form.Field>
-            <label>Company Name</label>
-            <input placeholder='Company name' name="company" value={this.state.company}  onChange={this.handleChange}/>
+
+         <Form.Field>
+          <label>What company do you currently work for?</label>
+            <SelectBox placeholder='Choose your company' name="company" changeCompany={this.handleSelectBox}/>
           </Form.Field>
           <Form.Field className="field-50">
             <label>How large is the company?</label>
-            <input placeholder='Company size' name="size" value={this.state.size}  onChange={this.handleChange} />
+            <input placeholder={this.state.company} name="size" value={this.state.size}  onChange={this.handleChange} />
           </Form.Field>
           <Form.Field>
             <label>Does your office have a good balance of diversity?</label>
