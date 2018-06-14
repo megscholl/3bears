@@ -9,7 +9,7 @@ class Reminder extends React.Component {
     // Event listener to close wifi reminder alert.
     render () {
     return (
-        <Modal defaultOpen='true' closeIcon id="modal-margin" className="modal-height">
+        <Modal defaultOpen={true} closeIcon id="modal-margin" className="modal-height">
         
           <div className="onload-modal">
             <Modal.Content className="content">
