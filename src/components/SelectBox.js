@@ -1,5 +1,4 @@
 import React from 'react';
-// import Select from 'react-select';
 import { Dropdown } from 'semantic-ui-react'
 
       
@@ -46,10 +45,13 @@ class SelectBox extends React.Component {
 
 
 
-  handleChange = (e, index, value) => {
-      console.log("e before setState: ", index.value)
-    this.setState({ selectedOption: index.value }, console.log("selectedOption: ", this.state.selectedOption));
+  handleChange = (a, b, c) => {
+    this.setState({selectedOption: c.value}, this.checkState)
     
+  }
+
+  checkState = () => {
+      console.log("CHECK STATE AFTER HANDLE CHANGE", this.state)
   }
 
     render() {
@@ -59,7 +61,7 @@ class SelectBox extends React.Component {
             let optionsList = this.state.seeList.map((c, index) => {return {value: c, label: c, key: index}})
             return (
                 <div>
-                    <Dropdown placeholder='Choose your company' value={this.state.selectedOption} onChange={this.handleChange} fluid search selection options={optionsList} />
+                    <Dropdown placeholder='Choose your company' onChange={this.props.changeCompany.bind(null, this)} fluid search selection options={optionsList} />
                 </div>
             );
             } else{
