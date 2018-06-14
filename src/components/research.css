@@ -14,19 +14,23 @@
     margin-right: auto;
     margin-left: auto;
     columns: 2;
-    height: 16rem;
+    margin-bottom: 2rem;
 }
 
 .graphs-layout {
+    width: 70%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    margin-left: 10%;
+    margin-left: 15%;
     margin-right: 10%;
-    /* columns: 2; */
 }
 
 .graphs {
-    width: 300px;
-    height: 190px;
+    width: 40%;
+    height: 35%;
+}
+.long-graphs {
+    width: 50%;
+    height: 40%;
 }
