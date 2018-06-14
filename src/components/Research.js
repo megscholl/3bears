@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import './research.css';
 import dressCodeGraph from './images/graphs/dresscode.PNG'
 import officeLayoutGraph from './images/graphs/dresscode.PNG'
+import teamBuildingGraph from './images/graphs/team-building.PNG'
+import gender from './images/graphs/gender.PNG'
 
 class Research extends Component {
     render() {
@@ -22,8 +24,10 @@ class Research extends Component {
                         <p>Below are the graphical findings of 3Bears data.</p>
                     </section>
                     <section className="graphs-layout">
-                    <label>Dress Code</label><br /><img src={dressCodeGraph} alt="dress code graph results" className="graphs"/>
-                    <label>Office Layouts</label><br /><img src={officeLayoutGraph} alt="office layout graph results" className="graphs"/>
+                    <img src={dressCodeGraph} alt="dress code graph results" className="graphs"/>
+                    <img src={officeLayoutGraph} alt="office layout graph results" className="graphs"/>
+                    <img src={teamBuildingGraph} alt="team-building graph results" className="long-graphs"/>
+                    <img src={gender} alt="gender graph results" className="graphs"/>
                     </section>
                 </article>
             </div>

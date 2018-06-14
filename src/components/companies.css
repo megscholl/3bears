@@ -1,4 +1,33 @@
-h1 {
-    font-size: 100px;
-    font-family: serif;
+@import url('https://fonts.googleapis.com/css?family=Judson');
+
+.research-h1 {
+    /* font-weight: none; */
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Judson', serif;
+    line-height: 5rem;
+}
+
+
+.quote-blockquote {
+    /* padding-top: 3rem; */
+    font-style: italic;
+    font-size: 22px;
+    padding-left: 10%;
+    width: 55%;
+    line-height: 2rem;
+}
+
+
+.author {
+    font-style: italic;
+    color: rgb(51, 92, 131);
+    padding-right: 9rem;
+}
+
+
+.quote-container {
+    width: 100%;
+    /* padding-top: 15%; */
+    padding-left: 5rem;
 }
