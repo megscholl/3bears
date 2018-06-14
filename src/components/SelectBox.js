@@ -1,5 +1,6 @@
 import React from 'react';
-import Select from 'react-select';
+// import Select from 'react-select';
+import { Dropdown } from 'semantic-ui-react'
 
       
        
@@ -21,15 +22,15 @@ class SelectBox extends React.Component {
         .then(res => res.json())
         .then(
             (result) => {
-            let companyList = [];
+            let boxCompanyList = [];
                 let seeObject = Object.values(result);
                 for(let company in seeObject){
-                companyList.push(seeObject[company].company)
+                boxCompanyList.push(seeObject[company].company)
                 }
-                console.log("company List", companyList);
+                console.log("company List", boxCompanyList);
                 this.setState({
                     isLoaded: true,
-                    seeList: companyList
+                    seeList: boxCompanyList
                     })
             },
 
@@ -52,19 +53,26 @@ class SelectBox extends React.Component {
   }
 
     render() {
-        const { selectedOption } = this.state;
+        // const { selectedOption } = this.state;
         
         if(this.state.isLoaded === true) {
             // let optionsCollection = this.state.seeList.map((c) => <option value={c} label={c} onChange={this.handleChange}>{c}</option>);
-
+                // let valueOfCompanyOptions = this.state.seeList.map((c) => {return {value: c, label: c}});
+                
             return (
-                        <Select
-                            name="company"
-                            value={selectedOption}
-                            onChange={this.handleChange}
-                            options=
-                                {this.state.seeList.map((c) => {return {value: c, label: c}})}
-                        />
+                <div>
+                
+                    <Dropdown placeholder='Choose your company' fluid search selection options={this.state.seeList.map((c) => {return {value: c, label: c}})} />
+
+                    
+                    {/*<Select
+                        name="company"
+                        value={selectedOption}
+                        onChange={this.handleChange}
+                        options=
+                            {this.state.seeList.map((c) => {return {value: c, label: c}})}
+                    />*/}
+                </div>
             );
             } else{
                 console.log("error setting state")
