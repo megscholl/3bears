@@ -34,6 +34,9 @@ import webflow from './images/companies/webflow.png'
 import youscience from './images/companies/youscience.jpg'
 
 
+import { Button, Icon } from 'semantic-ui-react'
+
+
 
 class Companies extends Component {
     render() {
@@ -83,9 +86,17 @@ class Companies extends Component {
                 </div>
 
 
-                <div>
-                <NavLink to="/reviews">Click here to write a review about your company</NavLink>
-                </div>
+                <div className="center-btn">
+                <NavLink to="/reviews">
+                <Button animated>
+                  <Button.Content visible>Write a Review about your Company!</Button.Content>
+                  <Button.Content hidden>
+                    <Icon name='right arrow' />
+                  </Button.Content>
+                </Button>
+                </NavLink>
+              </div>
+
             </div>
     )}
 }
