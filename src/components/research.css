@@ -34,3 +34,11 @@
     width: 50%;
     height: 40%;
 }
+
+.review-intro {
+    width: 45%;
+    font-size: 18px;
+    padding-bottom: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+}

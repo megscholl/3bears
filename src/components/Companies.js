@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './companies.css';
+import { NavLink } from 'react-router-dom';
+import pingpong from './images/pingpong.jpg'
 import advent from './images/companies/Advent.png'
 import aetna from './images/companies/aetna.png'
 import asurion from './images/companies/asurion.png'
@@ -37,13 +39,15 @@ class Companies extends Component {
     render() {
         return(
             <div>
-                <h1 className="research-h1">Company Cultures</h1>
+                <h1 className="research-h1">Companies to Discover at 3Bears</h1>
                 
                 <div className="quote-container">
-                    <blockquote className="quote-blockquote"> "A company culture that facilitates employee <em>happiness</em> means <em>lower turnover</em> and <em>better company performance</em>. Employees are loyal and companies perform better. It’s a win-win."
-                    </blockquote>
+                    <blockquote className="quote-blockquote"> "A company culture that facilitates employee happiness means lower turnover and better company performance. Employees are loyal and companies perform better. It’s a win-win."
                     <h6 className="author">zach buylgo, 'the 4 elements that make a great company culture'</h6>
+                    </blockquote>
                 </div>
+
+                <div><img src={pingpong} alt="pingpong office" className="banner"/></div>   
 
                 <div className="logo-container">
                 <img src={advent} alt="advent" className="advent"/>
@@ -78,6 +82,10 @@ class Companies extends Component {
                 <img src={youscience} alt="youscience" className="youscience"/>
                 </div>
 
+
+                <div>
+                <NavLink to="/reviews">Click here to write a review about your company</NavLink>
+                </div>
             </div>
     )}
 }

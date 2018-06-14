@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
-import Nav from './Nav';
-// import Main from './Main';
-import Footer from './Footer';
-import Companies from './Companies';
-import Research from './Research';
-import CompanyForm from './Form';
+import Nav from './Nav'
+import Footer from './Footer'
+import Companies from './Companies'
+import Research from './Research'
+import CompanyForm from './Form'
 import About from './About'
 import Contact from './Contact'
-import Reminder from './OnLoadModal';
-import CompanyCards from './Cards';
-import {Route} from 'react-router-dom';
+import Reminder from './OnLoadModal'
+import CompanyCards from './Cards'
+import {Route} from 'react-router-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 

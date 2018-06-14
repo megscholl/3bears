@@ -6,6 +6,7 @@ class Footer extends Component {
     render() {
         return(
             <div className="footer center-footer">
+            <hr />
                 <img src={Inline_logo} alt="3Bears inline logo" className="inline-logo"/>
                 <h5>design & development by meg scholl</h5>
                 <h6>images from unsplash</h6>

@@ -1,5 +1,6 @@
 .inline-logo {
     width: 25%;
+    padding-top: 1rem;
 }
 
 .center-footer {
@@ -15,5 +16,5 @@ h5, h6 {
 }
 
 .footer {
-    padding-top: 20%;
+    padding-top: 5%;
 }

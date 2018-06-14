@@ -1,5 +1,6 @@
 import React from 'react';
 // import ReactDOM from 'react-dom';
+import FormIntro from './FormIntro'
 import { Button, Form } from 'semantic-ui-react';
 import {rebase} from './fb-key';
 import './form.css';
@@ -78,7 +79,8 @@ class CompanyForm extends React.Component {
   render() {
 
     return (
-      
+      <div>
+        <FormIntro />
         <Form onSubmit={this.handleSubmit} className="field-30">
 
          <Form.Field>
@@ -136,6 +138,7 @@ class CompanyForm extends React.Component {
       
           <Button type='submit'>Submit</Button>
           </Form>
+        </div>
     );
   }
 
