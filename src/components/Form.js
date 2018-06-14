@@ -138,6 +138,7 @@ class CompanyForm extends React.Component {
       
           <Button type='submit'>Submit</Button>
           </Form>
+
         </div>
     );
   }
