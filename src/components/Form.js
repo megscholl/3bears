@@ -55,7 +55,7 @@ class CompanyForm extends React.Component {
     const name = target.name;
     console.log("value, name", value, name);
     this.setState({
-            name: value
+            [name]: value
     });
   }
 
@@ -83,7 +83,7 @@ class CompanyForm extends React.Component {
 
          <Form.Field>
           <label>What company do you currently work for?</label>
-            <SelectBox placeholder='Choose your company' name="company" changeCompany={this.handleSelectBox}/>
+          <SelectBox placeholder='Choose your company' name="company" changeCompany={this.handleSelectBox}/>
           </Form.Field>
           <Form.Field className="field-50">
             <label>How large is the company?</label>
