@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Judson');
+
+
+.research-h1 {
+    /* font-weight: none; */
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Judson', serif;
+    line-height: 5rem;
+}
+
+.research-content {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    columns: 2;
+    height: 16rem;
+}
+
+.graphs-layout {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    height: 30%;
+    /* columns: 2; */
+}
+
+.graphs {
+    /* width: 30%; */
+}

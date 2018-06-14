@@ -22,15 +22,15 @@ class SelectBox extends React.Component {
         .then(res => res.json())
         .then(
             (result) => {
-            let companyList = [];
+            let boxCompanyList = [];
                 let seeObject = Object.values(result);
                 for(let company in seeObject){
-                companyList.push(seeObject[company].company)
+                boxCompanyList.push(seeObject[company].company)
                 }
-                console.log("company List", companyList);
+                console.log("company List", boxCompanyList);
                 this.setState({
                     isLoaded: true,
-                    seeList: companyList
+                    seeList: boxCompanyList
                     })
             },
 

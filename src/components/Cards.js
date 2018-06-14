@@ -1,9 +1,10 @@
 
 import React from 'react'
-import  { Card } from 'semantic-ui-react';
-import getCompanyResults from './SelectBox';
+import { Item, Label } from 'semantic-ui-react'
 
+let paragraph = `<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>`
 
+// let companyState = getCompanyResults();
 
 class CompanyCards extends React.Component {
 
@@ -15,30 +16,31 @@ class CompanyCards extends React.Component {
             companyResults: [],
             error: null
         }
-
-        // this.getAnotherClicked=this.getAnotherClicked.bind(this);
+        return(console.log("props", this.state))
     }
     
-    componentDidMount(){
-        let companyState = getCompanyResults();
-        this.setState = {
-            companyResults: companyState
-        }
-        // .then((result) => {
-        //     console.log("res res", result);
-        // });
-    }
+
+    
+    // componentDidMount(){
+    //     this.setState = {
+    //         companyResults: companyState
+    //     }
+    //     // .then((result) => {
+    //     //     console.log("res res", result);
+    //     // });
+    // }
 
 
 
-    getCompanyResults = () => {
+    componentDidMount = () => {
         console.log("fetch running");
             fetch("https://bears-22c68.firebaseio.com/companies.json")
             .then(res => res.json())
             .then(
                 (result) => {
+                    let companyNameArray = Object.values(result);
                     console.log("result",  Object.values(result));
-                    return Object.values(result)
+                    return companyNameArray
                 },
                 (error) => {
                     this.setState({
@@ -46,7 +48,9 @@ class CompanyCards extends React.Component {
                         error: error,
                     })
                 })
+                return(console.log("DidMount setState", this.setState))
         }
+
 
     render() {
             let {error, resultsLoaded, companyResults} = this.state;
@@ -59,13 +63,23 @@ class CompanyCards extends React.Component {
                 return <div>Loading...</div>
             } else{
                 let surveyResults = companyResults.map((company, index) => (
-                    <div key={index}>
-                      <Card>
-                        {company.company}
-                        {}
-                        {}
-                      </Card>
-                    </div>
+                    <Item.Group divided key={index}>
+                        <Item>
+                            <Item.Image src='/assets/images/wireframe/image.png' />
+
+                            <Item.Content>
+                                <Item.Header>{company.company}</Item.Header>
+                                <Item.Meta>
+                                <span className='cinema'>{company.company}</span>
+                                </Item.Meta>
+                                <Item.Description>{paragraph}</Item.Description>
+                                <Item.Extra>
+                                <Label>IMAX</Label>
+                                <Label icon='globe' content='Additional Languages' />
+                                </Item.Extra>
+                            </Item.Content>
+                        </Item>
+                    </Item.Group>
                 ))
                 return (
                     <div>{surveyResults}</div>
