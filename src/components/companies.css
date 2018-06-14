@@ -8,26 +8,172 @@
     line-height: 5rem;
 }
 
+.banner {
+    width: 100%;
+    height: 300px;
+}
+
 
 .quote-blockquote {
     /* padding-top: 3rem; */
     font-style: italic;
-    font-size: 22px;
-    padding-left: 10%;
-    width: 55%;
+    font-size: 25px;
+    width: 45%;
     line-height: 2rem;
 }
 
 
 .author {
+    width: 100%;
+    margin-top: .5rem;
+    float: left;
     font-style: italic;
     color: rgb(51, 92, 131);
-    padding-right: 9rem;
+    /* padding-right: 20rem; */
 }
 
 
 .quote-container {
     width: 100%;
     /* padding-top: 15%; */
-    padding-left: 5rem;
+    padding-left: 15%;
 }
+
+
+.logo-container {
+    width: 65%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+ .advent {
+    margin-top: 5%;
+    width: 40%;
+    height: 40%;
+}
+ .aetna {
+     margin-top: 5%;
+    margin-left: 1rem;
+    width: 20%;
+    height: 20%;
+}
+ .asurion {
+     width: 30%;
+     height: 30%;
+ }
+ .cbs {
+    margin-top: 3%;
+    width: 30%;
+    height: 30%;
+}
+ .cgi {
+    width: 20%;
+    height: 20%;
+}
+.efc {
+    margin-top: 5%;
+    width: 30%;
+    height: 30%;
+}
+ .emma {
+    width: 30%;
+    height: 30%;}
+ .eventbrite {
+    width: 30%;
+    height: 30%;
+}
+ .ena {
+    width: 30%;
+    height: 30%;}
+ .factor {
+    width: 20%;
+    height: 20%;}
+ .fma {
+    width: 30%;
+    height: 30%;}
+.gsf {
+    width: 30%;
+    height: 30%;
+    margin-top: 5%;
+}
+ .ghertner {
+    width: 30%;
+    height: 30%;
+    margin-bottom: 5%;
+}
+ .groups360 {
+    width: 30%;
+    height: 30%;}
+ .hca {
+    width: 30%;
+    height: 30%;}
+ .healthtrust {
+    width: 30%;
+    height: 30%;}
+ .lp {
+    width: 30%;
+    height: 30%;
+}
+.neuro {    
+    width: 30%;
+    height: 20%;
+    margin-top: 5%;
+}
+ .nss {
+    width: 20%;
+    height: 20%;
+}
+.nurse {
+    width: 30%;
+    height: 30%;
+}
+ .opensky {
+    width: 22%;
+    height: 22%;
+}
+ .pylon {
+    width: 25%;
+    height: 25%;
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+ .quore {
+     margin-top: 5%;
+    width: 15%;
+    height: 15%;}
+ .ramsey {
+    width: 30%;
+    height: 30%;
+    margin-top: 8%;
+}
+ .regions {
+    width: 30%;
+    height: 30%;
+    margin-top: 10%;
+}
+ .tapclicks {
+    width: 30%;
+    height: 30%;}
+ .tngov {
+    margin-top: 5%;
+    width: 15%;
+    height: 15%;}
+.vandy {
+    width: 30%;
+    height: 30%;
+}
+ .webflow {
+    width: 30%;
+    height: 30%;}
+ .youscience {
+    width: 30%;
+    height: 30%;}
+
+
+
+
