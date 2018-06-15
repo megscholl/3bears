@@ -1,5 +1,6 @@
 
 import React from 'react'
+import './cards.css'
 import { Item, Label } from 'semantic-ui-react'
 
 let paragraph = `<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>`
@@ -55,9 +56,10 @@ class CompanyCards extends React.Component {
                 return <div>Loading...</div>
             } else{
                 let surveyResults = companyResults.map((company, index) => (
-                    <Item.Group divided key={index}>
+                    
+                    <Item.Group divided key={index} className="results-item">
                         <Item>
-                            <Item.Image src='/assets/images/wireframe/image.png' />
+                            <Item.Image src={company.logo} />
 
                             <Item.Content>
                                 <Item.Header>{company.company}</Item.Header>
@@ -74,7 +76,7 @@ class CompanyCards extends React.Component {
                     </Item.Group>
                 ))
                 return (
-                    <div>{surveyResults}</div>
+                    <div className="results-container">{surveyResults}</div>
                 )
             }
         
