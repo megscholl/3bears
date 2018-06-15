@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import './home.css'
 import Nav from './Nav'
 import Footer from './Footer'
 import Companies from './Companies'
@@ -9,6 +10,7 @@ import About from './About'
 import Contact from './Contact'
 import Reminder from './OnLoadModal'
 import CompanyCards from './Cards'
+import HomePage from './Home'
 import {Route} from 'react-router-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 
@@ -19,12 +21,15 @@ class App extends Component {
 
   render() {
     return (
-      <Router path="/">
+      <Router path="/home">
         <div className="App">
-
-        <div className="modal-css"><Reminder /></div>
         <Nav />
-            {/*<Main />*/}   
+        <div className="modal-css"><Reminder /></div>
+        <Route path="/home" exact strict render={
+          () => {
+            return(<Nav />, <div className="routing-padding"><HomePage /></div>)
+          }
+        }/> 
                  
         <Route path="/companies" exact strict render={
           () => {
