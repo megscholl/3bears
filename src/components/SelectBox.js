@@ -61,7 +61,7 @@ class SelectBox extends React.Component {
             let optionsList = this.state.seeList.map((c, index) => {return {value: c, label: c, key: index}})
             return (
                 <div>
-                    <Dropdown placeholder='Choose your company' onChange={this.props.changeCompany.bind(null, this)} fluid search selection options={optionsList} />
+                    <Dropdown placeholder='Choose your company' text={this.state.company} onChange={this.props.changeCompany.bind(null, this)} fluid search selection options={optionsList} />
                 </div>
             );
             } else{

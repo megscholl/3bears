@@ -6,3 +6,29 @@ h1 {
     font-family: 'Judson', serif;
     line-height: 5rem;
 }
+
+
+.quote-blockquote {
+    /* padding-top: 3rem; */
+    font-style: italic;
+    font-size: 25px;
+    width: 45%;
+    line-height: 2rem;
+}
+
+
+.author {
+    /* width: 100%; */
+    margin-top: .5rem;
+    float: left;
+    font-style: italic;
+    color: rgb(51, 92, 131);
+    /* padding-right: 20rem; */
+}
+
+
+.quote-container {
+    width: 100%;
+    /* padding-top: 15%; */
+    padding-left: 15%;
+}
