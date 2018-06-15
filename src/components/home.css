@@ -32,3 +32,19 @@ h1 {
     /* padding-top: 15%; */
     padding-left: 15%;
 }
+
+
+
+.banner-container {
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+    margin-bottom: 3100px;
+    object-position: center;
+}

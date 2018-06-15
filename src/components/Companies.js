@@ -50,7 +50,7 @@ class Companies extends Component {
                     </blockquote>
                 </div>
 
-                <div><img src={pingpong} alt="pingpong office" className="banner"/></div>   
+                <div className="banner-container"><img src={pingpong} alt="pingpong office" className="banner"/></div>   
 
                 <div className="logo-container">
                 <img src={advent} alt="advent" className="advent"/>

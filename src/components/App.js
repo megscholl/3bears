@@ -24,7 +24,7 @@ class App extends Component {
       <div className="App">
         <Nav />
 
-        <Route path="/" render={() => {return(<div className="modal-css"><Reminder /></div>, <div className="routing-padding"><HomePage /></div>)}}/> 
+        <Route path="/" exact strict render={() => {return(<div className="modal-css"><Reminder /></div>, <div className="routing-padding"><HomePage /></div>)}}/> 
 
         <Route path="/home" exact strict render={() => {return(<div className="routing-padding"><HomePage /></div>)}}/>
                  
