@@ -16,21 +16,7 @@ class CompanyCards extends React.Component {
             companyResults: [],
             error: null
         }
-        return(console.log("props", this.state))
     }
-    
-
-    
-    // componentDidMount(){
-    //     this.setState = {
-    //         companyResults: companyState
-    //     }
-    //     // .then((result) => {
-    //     //     console.log("res res", result);
-    //     // });
-    // }
-
-
 
     componentDidMount = () => {
         console.log("fetch running");
@@ -38,23 +24,29 @@ class CompanyCards extends React.Component {
             .then(res => res.json())
             .then(
                 (result) => {
+                    {/*set fetched 'result' items to an array with Object.values*/}
                     let companyNameArray = Object.values(result);
                     console.log("result",  Object.values(result));
-                    return companyNameArray
+                    
+                    this.setState({
+                        resultsLoaded: true,
+                        companyResults: companyNameArray
+                    })
+                        return companyNameArray
                 },
                 (error) => {
                     this.setState({
                         isLoaded: true,
-                        error: error,
+                        error: error
                     })
                 })
-                return(console.log("DidMount setState", this.setState))
+                return(console.log("DIDMOUNT SETSTATE:", this.setState))
         }
 
 
     render() {
             let {error, resultsLoaded, companyResults} = this.state;
-            console.log("companyResults", companyResults);
+            console.log("CARDS STATE", this.state);
             if(error) {
                 return (
                     <div>Error: {error.message}</div>
