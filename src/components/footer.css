@@ -1,6 +1,7 @@
 .inline-logo {
     width: 25%;
     padding-top: 1rem;
+    padding-bottom: -2rem;
 }
 
 .center-footer {
@@ -11,10 +12,17 @@
 
 h5, h6 {
     font-weight: normal;
-    line-height: .5px;
+    /* line-height: .5px; */
     text-align: center;
 }
 
+
 .footer {
-    padding-top: 3%;
+    background: linear-gradient(#ffffff, rgba(51, 92, 131, 0.39));
+    /* background-color:rgb(51, 92, 131, 0.274); */
+    margin-top: 2%;
+}
+
+.footer-btn {
+    padding-bottom: 1rem;
 }
