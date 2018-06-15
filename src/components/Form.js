@@ -73,7 +73,7 @@ class CompanyForm extends React.Component {
     alert('Thank you for adding a review about ' + this.state.company + '! This will ensure that 3Bears will be the number 1 site for job-seekers, once like yourself, to find information about the culture fit of different companies in Nashville.');
     event.preventDefault();
     let stateObject = this.state;
-    SaveObjToFB(`companies/${(this.state.company).toLowerCase()}`, stateObject);
+    SaveObjToFB(`companies/`, stateObject);
     console.log("form object", )
   }
 
@@ -90,7 +90,7 @@ class CompanyForm extends React.Component {
           </Form.Field>
           <Form.Field className="field-50">
             <label>How large is the company?</label>
-            <input placeholder={this.state.company} name="size" value={this.state.size}  onChange={this.handleChange} />
+            <input placeholder='Number of employees' name="size" value={this.state.size}  onChange={this.handleChange} />
           </Form.Field>
           <Form.Field>
             <label>Does your office have a good balance of diversity?</label>
@@ -128,7 +128,7 @@ class CompanyForm extends React.Component {
             <label>What do you dislike about your company's culture?</label>
             <input placeholder='What could the company improve on?' name="dislikes" className="field-height" value={this.state.dislikes}  onChange={this.handleChange} />
           </Form.Field>
-          <Form.Field className="field-50">
+          <Form.Field className="field-60">
             <label>What are your typical hours per week?</label>
             <input placeholder='Hours per week' name="hours"  value={this.state.hours} onChange={this.handleChange} />
           </Form.Field>
