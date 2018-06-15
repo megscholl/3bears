@@ -12,7 +12,7 @@ class Nav extends Component {
                     <ul className="nav-bar">
                         <li><NavLink to="/home">home</NavLink></li>
                         <li><NavLink to="/companies">companies</NavLink></li>
-                        <li><NavLink to="/discover">discover</NavLink></li>
+                        <li><NavLink to="/discover">cultures</NavLink></li>
                         <li><NavLink to="/research">research</NavLink></li>
                         <li><NavLink to="/reviews">write a review</NavLink></li>
                         <li><NavLink to="/about">about</NavLink></li>
