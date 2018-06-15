@@ -2,6 +2,7 @@ import React from 'react'
 import './home.css'
 import { NavLink } from 'react-router-dom';
 import { Button, Icon } from 'semantic-ui-react'
+import WorkBear from './images/work-bear.png'
 import coworkers from './images/open-space-2.jpg'
 import exercise from './images/home-flex-photos/balloffice.jpg'
 import coaching from './images/home-flex-photos/coaching_mw.jpg'
@@ -18,6 +19,9 @@ class HomePage extends React.Component {
                     <blockquote className="quote-blockquote">“...an understanding of our individual personality is profoundly important in maximizing our happiness and productivity at work!”
                     <h6 className="author">dr. kelly schofield, good&co 2016</h6>
                     </blockquote>
+
+                    
+                    <div><img src={WorkBear} alt="3bear - cool icon" className="intro-icon"/></div>
                 </div>
 
                 
