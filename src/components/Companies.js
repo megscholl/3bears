@@ -52,6 +52,7 @@ class Companies extends Component {
 
                 <div className="banner-container"><img src={pingpong} alt="pingpong office" className="banner"/></div>   
 
+                <h2 className="research-h2">Employees have already submitted culture info about these companies...</h2>
                 <div className="logo-container">
                 <img src={advent} alt="advent" className="advent"/>
                 <img src={aetna} alt="aetna" className="aetna"/>
@@ -86,16 +87,16 @@ class Companies extends Component {
                 </div>
 
 
-                <div className="center-btn">
+            <div className="center-btn">
                 <NavLink to="/reviews">
-                <Button animated>
-                  <Button.Content visible>Write a Review about your Company!</Button.Content>
-                  <Button.Content hidden>
-                    <Icon name='right arrow' />
-                  </Button.Content>
-                </Button>
+                    <Button animated>
+                        <Button.Content visible>Write a Review about your Company!</Button.Content>
+                        <Button.Content hidden>
+                            <Icon name='right arrow' />
+                        </Button.Content>
+                    </Button>
                 </NavLink>
-              </div>
+            </div>
 
             </div>
     )}
