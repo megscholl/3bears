@@ -1,5 +1,6 @@
 import React from 'react'
 import './home.css'
+import coworkers from './images/open-space-2.jpg'
 
 class HomePage extends React.Component {
     render() {
@@ -11,6 +12,9 @@ class HomePage extends React.Component {
                     <h6 className="author">dr. kelly schofield, good&co 2016</h6>
                     </blockquote>
                 </div>
+
+                
+                <div className="banner-container"><img src={coworkers} alt="pingpong office" className="banner"/></div> 
             </div>
         )
     }
