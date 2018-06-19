@@ -5,6 +5,7 @@ import { Button, Form } from 'semantic-ui-react';
 import {rebase} from './fb-key';
 import './form.css';
 import SelectBox from './SelectBox';
+import swal from 'sweetalert'
 // import getCompanyResults from './Fetch';
 
 
@@ -70,7 +71,14 @@ class CompanyForm extends React.Component {
   }
 
   handleSubmit(event) {
-    alert('Thank you for adding a review about ' + this.state.company + '! This will ensure that 3Bears will be the number 1 site for job-seekers, once like yourself, to find information about the culture fit of different companies in Nashville.');
+    swal({
+      icon: "success",
+      title: "Thank you!",
+      text: 'Thank you for adding a review to 3Bears! This will ensure that 3Bears will be the #1 site for job-seekers, once like yourself, to find information about the culture fit of different companies in Nashville. The review may take up to 24 hours!',
+      buttons: true,
+      timer: 5000,
+    });
+    
     event.preventDefault();
     let stateObject = this.state;
     SaveObjToFB(`companies/`, stateObject);
