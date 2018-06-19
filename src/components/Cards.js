@@ -70,6 +70,7 @@ class CompanyCards extends React.Component {
                                 <Item.Description><Header as='h6' className="h6">Dress code:</Header> <span className="results-results">{company.dress}</span></Item.Description>
                                 <Item.Description><Header as='h6' className="h6">Typical work-week schedule, benefits:</Header> <span className="results-results">{company.hours}</span></Item.Description>
                                 <Item.Description><Header as='h6' className="h6">Pros:</Header> <span className="results-results">"{company.likes}"</span></Item.Description>
+                                <Item.Description><Header as='h6' className="h6">Cons:</Header> <span className="results-results">"{company.dislikes}"</span></Item.Description>
                                 <Item.Extra>
                                 
                                 {/*<Label icon='star outline' content='Additional Reviews' />*/}

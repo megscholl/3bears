@@ -44,7 +44,8 @@ class CompanyForm extends React.Component {
                   likes: '',
                   dislikes: '',
                   hours: '',
-                  appeal: ''
+                  appeal: '',
+                  selectedOption: ''
             };
 
     this.handleChange = this.handleChange.bind(this);
@@ -62,7 +63,8 @@ class CompanyForm extends React.Component {
   }
 
   handleSelectBox = (a, b, c) => {
-    this.setState({ company: c.value }, this.checkState);
+    this.setState({ company: c.value,
+                    selectedOption: ''}, this.checkState);
 
   }
 
@@ -76,7 +78,7 @@ class CompanyForm extends React.Component {
       title: "Thank you!",
       text: 'Thank you for adding a review to 3Bears! This will ensure that 3Bears will be the #1 site for job-seekers, once like yourself, to find information about the culture fit of different companies in Nashville. The review may take up to 24 hours!',
       buttons: true,
-      timer: 5000,
+      timer: 10000,
     });
     
     event.preventDefault();
@@ -96,7 +98,7 @@ class CompanyForm extends React.Component {
         <section className="section-small">
          <Form.Field>
           <label>What company do you currently work for?</label>
-          <SelectBox text={this.state.company} value={this.state.company} name={this.state.company} changeCompany={this.handleSelectBox}/>
+          <SelectBox text={this.state.company} value={this.state.selectedOption} name={this.state.company} changeCompany={this.handleSelectBox}/>
           </Form.Field>
           <div className="form-col2">
           <Form.Field className="field-50">
