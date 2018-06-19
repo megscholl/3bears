@@ -11,7 +11,8 @@ class SelectBox extends React.Component {
         this.state = {
             isLoaded: false,
             seeList: '',
-            selectedOption: ''
+            selectedOption: '',
+            name: ''
         }
     }
 
@@ -46,7 +47,8 @@ class SelectBox extends React.Component {
 
 
   handleChange = (a, b, c) => {
-    this.setState({selectedOption: c.value}, this.checkState)
+    this.setState({selectedOption: c.value,
+                    name: c.value}, this.checkState)
     
   }
 
@@ -61,7 +63,7 @@ class SelectBox extends React.Component {
             let optionsList = this.state.seeList.map((c, index) => {return {value: c, label: c, key: index}})
             return (
                 <div>
-                    <Dropdown placeholder='Choose your company' text={this.state.company} onChange={this.props.changeCompany.bind(null, this)} fluid search selection options={optionsList} />
+                    <Dropdown placeholder='Choose your company' name="company" onChange={this.props.changeCompany.bind(null, this)} fluid search selection options={optionsList} />
                 </div>
             );
             } else{
