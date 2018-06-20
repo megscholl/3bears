@@ -15,21 +15,44 @@
     margin-left: auto;
     columns: 2;
     margin-bottom: 2rem;
+    font-size: 18px;
+}
+
+.right-content {
+    float: right;
+    margin-left: 2rem;
+}
+
+.left-content {
+    float: left;
+    margin-right: 2rem;
+}
+
+.container {
+    display: block;
+    margin: 12%;
 }
 
 .graphs-layout {
-    width: 70%;
-    display: flex;
+    width: 80%;
+    /* display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
-    margin-left: 15%;
+    justify-content: space-evenly; */
+    margin-left: 10%;
     margin-right: 10%;
+    margin-bottom: 15%;
+}
+
+.content-top {
+    padding-top: 1%;
+    font-size: 18px;
 }
 
 .graphs {
     width: 40%;
     height: 35%;
 }
+
 .long-graphs {
     width: 50%;
     height: 40%;
