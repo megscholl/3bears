@@ -1,8 +1,9 @@
 
 import React from 'react'
-import { Item, Label } from 'semantic-ui-react'
+import './cards.css'
+import { Item, Header } from 'semantic-ui-react'
 
-let paragraph = `<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>`
+// let paragraph = `<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>`
 
 // let companyState = getCompanyResults();
 
@@ -24,7 +25,7 @@ class CompanyCards extends React.Component {
             .then(res => res.json())
             .then(
                 (result) => {
-                    {/*set fetched 'result' items to an array with Object.values*/}
+                    
                     let companyNameArray = Object.values(result);
                     console.log("result",  Object.values(result));
                     
@@ -55,26 +56,32 @@ class CompanyCards extends React.Component {
                 return <div>Loading...</div>
             } else{
                 let surveyResults = companyResults.map((company, index) => (
-                    <Item.Group divided key={index}>
-                        <Item>
-                            <Item.Image src='/assets/images/wireframe/image.png' />
+                    
+                    <Item.Group divided key={index} className="results-item">
+                        <Item className="company-columns">
+                            <Item.Image src={company.logo} />
 
                             <Item.Content>
                                 <Item.Header>{company.company}</Item.Header>
                                 <Item.Meta>
-                                <span className='cinema'>{company.company}</span>
+                                <span className='cinema'>This company has {company.entries} culture fit reviews.</span> 
                                 </Item.Meta>
-                                <Item.Description>{paragraph}</Item.Description>
+                                <Item.Description><Header as='h6' className="h6">HR Department?</Header> <span className="results-results">{company.hr}</span></Item.Description>
+                                <Item.Description><Header as='h6' className="h6">Dress code:</Header> <span className="results-results">{company.dress}</span></Item.Description>
+                                <Item.Description><Header as='h6' className="h6">Typical work-week schedule, benefits:</Header> <span className="results-results">{company.hours}</span></Item.Description>
+                                <Item.Description><Header as='h6' className="h6">Pros:</Header> <span className="results-results">"{company.likes}"</span></Item.Description>
+                                <Item.Description><Header as='h6' className="h6">Cons:</Header> <span className="results-results">"{company.dislikes}"</span></Item.Description>
                                 <Item.Extra>
-                                <Label>IMAX</Label>
-                                <Label icon='globe' content='Additional Languages' />
+                                
+                                {/*<Label icon='star outline' content='Additional Reviews' />*/}
                                 </Item.Extra>
                             </Item.Content>
+
                         </Item>
                     </Item.Group>
                 ))
                 return (
-                    <div>{surveyResults}</div>
+                    <div className="results-container">{surveyResults}</div>
                 )
             }
         
