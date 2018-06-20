@@ -10,7 +10,7 @@ class SelectBox extends React.Component {
         super(props);
         this.state = {
             isLoaded: false,
-            seeList: '',
+            seeList: [],
             selectedOption: ''
         }
     }
@@ -22,17 +22,17 @@ class SelectBox extends React.Component {
         .then(res => res.json())
         .then(
             (result) => {
-            let boxCompanyList = [];
-                let seeObject = Object.values(result);
-                for(let company in seeObject){
-                boxCompanyList.push(seeObject[company].company)
-                }
-                console.log("company List", boxCompanyList);
-                this.setState({
-                    isLoaded: true,
-                    seeList: boxCompanyList,
-                    selectedOption: ''
-                    })
+                let boxCompanyList = [];
+                    let seeObject = Object.values(result);
+                    for(let company in seeObject){
+                    boxCompanyList.push({key: seeObject[company].company, value: seeObject[company].company, text:seeObject[company].company})
+                    }
+                    console.log("company List", boxCompanyList);
+                    this.setState({
+                        isLoaded: true,
+                        seeList: boxCompanyList,
+                        selectedOption: ''
+                        })
             },
 
             (error) => {
@@ -45,10 +45,10 @@ class SelectBox extends React.Component {
 
 
 
-  handleChange = (a, b, c) => {
-    this.setState({selectedOption: c.value}, this.checkState)
-    
-  }
+        handleChange = (e, c) => {
+            this.setState({ selectedOption: c.value }, this.checkState);
+            this.props.changeCompany(c.value)
+        }
 
   checkState = () => {
       console.log("CHECK STATE AFTER HANDLE CHANGE", this.state)
@@ -58,10 +58,11 @@ class SelectBox extends React.Component {
         
         if(this.state.isLoaded === true) {
 
-            let optionsList = this.state.seeList.map((c, index) => {return {value: c, label: c, key: index}})
+            // let optionsList = this.state.seeList.map((c, index) => {return {value: c, label: c, key: index}})
             return (
                 <div>
-                    <Dropdown placeholder='Choose your company' text={this.state.company} onChange={this.props.changeCompany.bind(null, this)} fluid search selection options={optionsList} />
+                    <Dropdown placeholder='Choose your company' value={this.state.selectedOption} onChange={this.handleChange} fluid search selection options={this.state.seeList} />
+                    {console.log(this.state.selectedOption)}
                 </div>
             );
             } else{
