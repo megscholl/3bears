@@ -63,9 +63,9 @@ class CompanyForm extends React.Component {
   }
 
   handleSelectBox = (a, b, c) => {
-    this.setState({ company: c.value,
-                    selectedOption: ''}, this.checkState);
-
+    this.setState({ 
+                    company: a,
+                    selectedOption: a}, this.checkState);
   }
 
   checkState = () => {
@@ -98,8 +98,10 @@ class CompanyForm extends React.Component {
         <section className="section-small">
          <Form.Field>
           <label>What company do you currently work for?</label>
-          <SelectBox text={this.state.company} value={this.state.selectedOption} name={this.state.company} changeCompany={this.handleSelectBox}/>
+          <SelectBox text={this.state.selectedOption} name={this.state.selectedOption} changeCompany={this.handleSelectBox}/>
           </Form.Field>
+
+
           <div className="form-col2">
           <Form.Field className="field-50">
             <label>How large is the company?</label>
