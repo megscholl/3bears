@@ -22,7 +22,7 @@ class Research extends Component {
 
                         <p>No question was required, except for the company name, to allow future job-seekers real information about the companies they will one day work for. </p>
 
-                        <p>Below are the graphical findings of 3Bears data.</p>
+                        <p>Below are some of the findings of 3Bears survey research.</p>
                     </section>
                     <section className="graphs-layout">
                         <div className="container">
@@ -32,7 +32,7 @@ class Research extends Component {
 
                         <div className="container">
                             <img src={officeLayoutGraph} alt="office layout graph results" className="graphs left-content"/>
-                            <p className="content-top">Office layouts may not typically be incuded in many questions for culture fit, but if the layout of an office is cubicles rather than open space with couches and unassigned desks, then there is a clear difference in company culture. Most offices were an open-floor layout with assigned desks, but surveyers were able to put in their own office's layout, which included remote/ distributed teams / home offices and classrooms. In Version 2 of 3Bears, there would include questions about break activities as well. </p>
+                            <p className="content-top">Office layouts may not typically be incuded in many questions for culture fit, but if the layout of an office is cubicles rather than open space with couches and unassigned desks, then there is a clear difference in company culture. Most offices were an open-floor layout with assigned desks, but surveyers were able to put in their own office's layout, which included remote/ distributed teams / home offices and classrooms.</p>
                         </div>
 
                         <div className="container">
