@@ -59,7 +59,7 @@ class CompanyCards extends React.Component {
                     
                     <Item.Group divided key={index} className="results-item">
                         <Item className="company-columns">
-                            <Item.Image src={company.logo} />
+                            <Item.Image src={company.logo} alt="{company.company} logo" title="{company.company} logo" className="company-img"/>
 
                             <Item.Content>
                                 <Item.Header>{company.company}</Item.Header>
