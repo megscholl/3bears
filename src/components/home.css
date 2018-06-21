@@ -40,16 +40,16 @@
 
 .quote-container {
     display: flex;
-    flew-flow: row wrap;
+    flex-flow: row wrap;
     width: 100%;
     /* padding-top: 15%; */
     padding-left: 15%;
 }
 
 .intro-icon {
-    /* margin-top: 2%;
-    margin-left: 25%; */
-    /* width: 35%; */
+    margin-top: 2%;
+    margin-left: 25%;
+    width: 35%;
 }
 
 .banner-container {

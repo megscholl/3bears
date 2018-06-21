@@ -1,0 +1,184 @@
+
+  
+/**//**//**//**//***//**//**//**//**/
+/* RESPONSIVE FOR CELLULAR DEVICES */
+
+            /* ///////// //*/
+            /* // 1024PX //*/
+            /* ///////// //*/
+@media screen and (max-width: 376px) {
+
+    html {
+        width: 375px;
+    }
+
+    .home-h1 {
+        text-align: center;
+        font-size: 20px;
+        font-family: 'Judson', serif;
+        line-height: 1rem;
+        padding-top: 15%;
+    }
+
+    .quote-blockquote {
+        /* padding-top: 3rem; */
+        font-style: italic;
+        font-size: 12px !important;
+        width: 85%;
+        line-height: 1rem;
+    }
+    
+
+    .author {
+        /* width: 100%; */
+        margin-top: .5rem;
+        float: left;
+        font-style: italic;
+        color: rgb(51, 92, 131);
+        /* padding-right: 20rem; */
+    }
+
+
+    .quote-container {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        /* padding-top: 15%; */
+        padding-left: 15%;
+    }
+
+    .nav-bar {
+        display: inline-flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        /* width: 60%;  */
+        float: right;
+        /* padding-left: 35%; */
+        padding-right: 2%;
+        margin-top: 2%;
+    }
+
+    .media {
+        display: none !important;
+    }
+
+    
+.banner-container {
+    display: none !important;
+}
+
+    
+    ul li {
+        list-style-type: none;
+        font-size: 10px  !important;
+    }
+
+    
+    .home-h2 {
+        text-align: center;
+        font-size: 12px !important;
+        letter-spacing: 1px;
+        font-style: italic;
+        color: rgb(165, 18, 87);
+        font-family: 'Judson', serif;
+        line-height: 2rem;
+    }
+}
+
+
+@media screen and (max-width: 412px) {
+    html {
+        width: 411px !important;
+    }
+    .home-h1 {
+        text-align: center;
+        font-size: 20px !important;
+        font-family: 'Judson', serif;
+        line-height: 1rem;
+        padding-top: 5%;
+    }
+
+    .nav-bar {
+        display: inline-flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        /* width: 60%;  */
+        /* float: right; */
+        /* padding-left: 35%; */
+        padding-right: 12%;
+        margin-top: 2%;
+    }
+    
+    .quote-blockquote {
+        /* padding-top: 3rem; */
+        font-style: italic;
+        font-size: 16px !important;
+        width: 85% !important;
+        /* line-height: 1rem; */
+    }
+    
+
+    .author {
+        margin-top: .5rem;
+        float: right !important;
+        width: 85% !important;
+        font-style: italic;
+        color: rgb(51, 92, 131);
+    }
+    
+    .banner-container {
+        display: none !important;
+    }
+
+    .quote-container {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        /* padding-top: 15%; */
+        padding-left: 0% !important;
+    }
+
+    .media {
+        display: none !important;
+    }
+
+    
+    ul li {
+        list-style-type: none;
+        font-size: 10px  !important;
+    }
+    
+    .intro-icon {
+        display: none !important;
+    }
+
+    .home-h2 {
+        text-align: center;
+        font-size: 12px !important;
+        letter-spacing: 1px;
+        font-style: italic;
+        color: rgb(165, 18, 87);
+        font-family: 'Judson', serif;
+        line-height: 2rem;
+    }
+}
+
+
+@media screen and (max-width: 769px) {
+
+
+}
+
+  
+/**//**//**//**//**//**//**//**//**/
+/* RESPONSIVE FOR TABLET DEVICES */
+
+            /* ///////// //*/
+            /* // 1024PX //*/
+            /* ///////// //*/
+@media screen and (max-width: 1024px) {
+
+
+}
+
+

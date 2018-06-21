@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import './research.css';
-import { Button, Icon } from 'semantic-ui-react'
+import ContactButton from './Button'
 
 
 class Contact extends Component {
@@ -10,14 +10,7 @@ class Contact extends Component {
             <div>
                 <h1 className="research-h1">Contact 3Bears</h1>
                 <div className="center-btn">
-                    <a href="mailto:meghan.e.scholl@gmail.com">
-                        <Button animated>
-                        <Button.Content visible>Email Us!</Button.Content>
-                        <Button.Content hidden>
-                            <Icon name='right mail' />
-                        </Button.Content>
-                        </Button>
-                    </a>
+                    <ContactButton />
                 </div>
             </div>
         )
