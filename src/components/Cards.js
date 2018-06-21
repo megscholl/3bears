@@ -66,11 +66,14 @@ class CompanyCards extends React.Component {
                                 <Item.Meta>
                                 <span className='cinema'>This company has {company.entries} culture fit reviews.</span> 
                                 </Item.Meta>
-                                <Item.Description><Header className="h6">HR Department?</Header> <span className="results-results">{company.hr}</span></Item.Description>
-                                <Item.Description><Header className="h6">Dress code:</Header> <span className="results-results">{company.dress}</span></Item.Description>
-                                <Item.Description><Header className="h6">Typical work-week schedule, benefits:</Header> <span className="results-results">{company.hours}</span></Item.Description>
-                                <Item.Description><Header className="h6">Pros:</Header> <span className="results-results">"{company.likes}"</span></Item.Description>
-                                <Item.Description><Header className="h6">Cons:</Header> <span className="results-results">"{company.dislikes}"</span></Item.Description>
+                                <Item.Description><Header as='h6' className="h6">Is there an HR Department?</Header> {company.hr}</Item.Description>
+                                <Item.Description><Header as='h6' className="h6">Dress code:</Header> {company.dress}</Item.Description>
+                                <Item.Description><Header as='h6' className="h6">Management Style: </Header> {company.mgmt}</Item.Description>
+                                <Item.Description><Header as='h6' className="h6">Office Layout: </Header> {company.layout}</Item.Description>
+                                <Item.Description><Header as='h6' className="h6">Typical work-week schedule, benefits:</Header> {company.hours}</Item.Description>
+                                <Item.Description><Header as='h6' className="h6">Pros:</Header> "{company.likes}"</Item.Description>
+                                <Item.Description><Header as='h6' className="h6">Cons:</Header> "{company.dislikes}"</Item.Description>
+                                <Item.Description><Header as='h6' className="h6">What made employees want to work there?:</Header> "{company.appeal}"</Item.Description>
                                 <Item.Extra>
                                 
                                 {/*<Label icon='star outline' content='Additional Reviews' />*/}

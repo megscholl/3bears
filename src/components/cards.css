@@ -18,12 +18,14 @@
 
 .h6 {
     text-align: left;
-    font-size: 10px;
+    width: 100%;
+    font-size: 14px !important;
     font-weight: bold;
-    /* padding-bottom: -2rem; */
-}
+    padding-top: 1rem !important;
+    padding-bottom: -2rem !important;
+ }
 
 .results-results {
-    padding-bottom: -20px;
-    width: 33%;
-}
+    /* margin-top: -.5rem !important; */
+    width: 43%;
+} 
