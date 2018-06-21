@@ -9,7 +9,7 @@ import CompanyForm from './Form'
 import About from './About'
 import Contact from './Contact'
 import Reminder from './OnLoadModal'
-import CompanyCards from './Cards'
+import Discover from './Discover'
 import HomePage from './Home'
 import {Route} from 'react-router-dom'
 
@@ -31,7 +31,7 @@ class App extends Component {
                  
         <Route path="/companies" exact strict render={() => {return(<div className="routing-padding"><Companies /></div>)}}/>   
 
-        <Route path="/discover" exact strict render={() => {return(<div className="routing-padding"><CompanyCards /></div>)}}/>
+        <Route path="/discover" exact strict render={() => {return(<div className="routing-padding"><Discover /></div>)}}/>
         
         <Route path="/research" exact strict render={() => {return(<div className="routing-padding"><Research /></div>)}}/>
         

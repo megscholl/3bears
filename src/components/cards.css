@@ -18,8 +18,9 @@
 
 .h6 {
     text-align: left;
-    font-size: 14px;
+    font-size: 10px;
     font-weight: bold;
+    /* padding-bottom: -2rem; */
 }
 
 .results-results {

@@ -10,7 +10,7 @@ class Nav extends Component {
         return(
             <div className="top-padding ">
                 <img src={Block_logo} alt="3Bears Block logo" className="block-logo"/>
-                <ul className="nav-bar">
+                <ul className="nav-bar ui visible">
                         <li className="item"><NavLink to="/home" className="nav-link">home</NavLink></li>
                         <li className="item"><NavLink to="/companies" className="nav-link">companies</NavLink></li>
                         <li className="item"><NavLink to="/discover" className="nav-link">cultures</NavLink></li>

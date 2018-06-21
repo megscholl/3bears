@@ -8,7 +8,7 @@
 .nav-bar {
     display: inline-flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 60%; 
     float: right;
     /* padding-left: 35%; */
