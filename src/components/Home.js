@@ -48,7 +48,7 @@ class HomePage extends React.Component {
                     </div>
 
             <div className="calltoactions">
-                <div className="center-btn">
+                <div className="center-home-btn">
                     <NavLink to="/companies">
                         <Button animated>
                             <Button.Content visible>Discover Companies on 3Bears!</Button.Content>
@@ -59,7 +59,7 @@ class HomePage extends React.Component {
                     </NavLink>
                 </div>
                 
-                <div className="center-btn">
+                <div className="center-home-btn">
                     <NavLink to="/reviews">
                         <Button animated>
                             <Button.Content visible>Write a Review about your Company!</Button.Content>
