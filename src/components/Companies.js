@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './companies.css';
-import CoolBear from './images/cool-bear.png'
+// import CoolBear from './images/cool-bear.png'
 import { NavLink } from 'react-router-dom';
-import pingpong from './images/pingpong.jpg'
+// import pingpong from './images/pingpong.jpg'
 import advent from './images/companies/Advent.png'
 import aetna from './images/companies/aetna.png'
 import asurion from './images/companies/asurion.png'
@@ -45,16 +45,15 @@ class Companies extends Component {
             <div>
                 <h1 className="research-h1">Companies to Discover at 3Bears</h1>
                 
-                <div className="quote-container">
+                {/*<div className="quote-container">
                 
                     <blockquote className="quote-blockquote"> "A company culture that facilitates employee happiness means lower turnover and better company performance. Employees are loyal and companies perform better. It’s a win-win."
                     <h6 className="author">zach buylgo, 'the 4 elements that make a great company culture'</h6>
                     </blockquote>
 
                     <div><img src={CoolBear} alt="3bear - cool icon" className="intro-icon"/></div>
-                </div>
-
-                <div className="banner-container"><img src={pingpong} alt="pingpong office" className="banner"/></div>   
+                </div>*/}
+ 
 
                 <h2 className="research-h2">Employees have already submitted culture info about these companies...</h2>
                 <div className="logo-container">
